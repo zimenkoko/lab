@@ -17,6 +17,8 @@ public class CommandContainer {
                 .put(HELP.getCommandName(), new HelpCommand(sendBotMessageService))
                 .put(DELETE.getCommandName(), new DeleteJokeCommand(sendBotMessageService, jokeService))
                 .put(CREATE.getCommandName(), new CreateJokeCommand(sendBotMessageService, jokeService))
+                .put(RANDOM.getCommandName(), new RandomJokeCommand(sendBotMessageService, jokeService))
+                .put(TOP.getCommandName(), new TopJokesCommand(sendBotMessageService, jokeService))
                 .put(NO.getCommandName(), new NoCommand(sendBotMessageService))
                 .build();
 

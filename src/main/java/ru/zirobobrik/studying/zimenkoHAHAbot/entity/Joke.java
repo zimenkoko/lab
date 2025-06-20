@@ -7,9 +7,11 @@ import java.util.Date;
 @Entity
 public class Joke {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "joke_seq")
+    @SequenceGenerator(name = "joke_seq", sequenceName = "joke_seq", allocationSize = 1)
+    @Column(name = "id")
     private Long id;
+
     @Column(name="text")
     private String text;
     @Column(name="date_of_create")

@@ -7,6 +7,8 @@ public enum CommandName {
     HELP("/help"),
     DELETE("/delete"),
     CREATE("/create"),
+    RANDOM("/random"),
+    TOP("/top"),
     NO("/no");
 
     private final String commandName;

@@ -15,8 +15,10 @@ public class HelpCommand implements Command {
                     + "%s \"id\" - получить шутку по id\n"
                     + "%s \"id\" - удалить шутку по id\n"
                     + "%s \"текст анекдота\" - добавить новую шутку\n\n"
+                    + "%s - получить случайную шутку\n"
+                    + "%s - топ шуток\n\n"
                     + "%s - просмотреть список команд",
-            JOKES.getCommandName(), JOKE.getCommandName(), DELETE.getCommandName(), CREATE.getCommandName(), HELP.getCommandName());
+            JOKES.getCommandName(), JOKE.getCommandName(), DELETE.getCommandName(), CREATE.getCommandName(), RANDOM.getCommandName(), TOP.getCommandName(), HELP.getCommandName());
 
     public HelpCommand(SendBotMessageService sendBotMessageService) {
         this.sendBotMessageService = sendBotMessageService;
